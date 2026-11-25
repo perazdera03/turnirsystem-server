@@ -38,9 +38,15 @@ U bazi na početku nema korisnika. Prvi nalog može da se napravi bez prijave, p
 - Tabela grupe se računa iz odigranih mečeva (nije posebna tabela u bazi).
 - Eliminacioni kostur podržava slobodne prolaze (BYE) i izbegava susret ekipa iz iste grupe u prvom kolu.
 
-## Demo alati
+## Demo baza
 
-Admin na stranici Ekipe može da doda test ekipe, a na stranici turnira da ih prijavi i popuni nasumične rezultate grupne faze i eliminacije. Tako se brzo proveravaju različite konfiguracije (npr. 8 ekipa 2 × 4, 12 ekipa 3 × 4 sa 2 BYE, 10 ekipa u 4 grupe).
+Fajl `demobaza.sql` sadrži gotove demo podatke (test ekipe i tri demo turnira). Da ih učitaš umesto da pravljenje podataka radiš ručno:
+
+1. U MySQL-u napravi praznu bazu `turnirsystem`.
+2. U MySQL Workbench-u: **Server → Data Import → Import from Self-Contained File**, izaberi `demobaza.sql`, za **Default Target Schema** izaberi `turnirsystem` i klikni **Start Import**.
+3. Napravi prvog admina preko Swagger-a (vidi iznad), jer u demo bazi nema korisnika.
+
+Ako koristiš demo bazu, `dotnet ef database update` ne moraš da pokrećeš.
 
 ## Struktura
 
