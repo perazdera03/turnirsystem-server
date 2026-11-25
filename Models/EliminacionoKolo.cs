@@ -11,7 +11,6 @@ public class EliminacionoKolo
     public int? Ekipa1Id {get; set;} //prva ekipa u mecu. nepoznato dok se ne sazna ko igra
     public int? Ekipa2Id {get; set;} //druga ekipa u mecu. isto tako je nepoznato
     public int? PobednikId {get; set;} //pobednik, tj ko ide dalje
-    public int? MecId {get; set;} //veza sa tabelom (modelom) Mec
     public int? RezultatEkipa1 {get; set;} //rezultati se prepisuju ovde
     public int? RezultatEkipa2 {get; set;} //i ovde
 
@@ -23,5 +22,4 @@ public class EliminacionoKolo
     public Ekipa? Ekipa1 {get; set;} //prva ekipa u mecu. moze biti prazno(null) dok se ne sazna ko igra
     public Ekipa? Ekipa2 {get; set;} //druga ekipa u mecu. moze biti prazno(null) dok se ne sazna ko igra
     public Ekipa? Pobednik {get; set;} //ekipa koja je pobedila. moze biti prazno(null) dok se ne sazna ko igra
-    public Mec? Mec {get; set;} //mec iz tabele Mec je povezan sa ovim kolom. moze biti prazno(null)
 }

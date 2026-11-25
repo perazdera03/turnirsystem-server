@@ -1,6 +1,6 @@
 # TurnirSystem (server)
 
-Server aplikacije za organizaciju turnira: ekipe, grupna faza, tabele, eliminacioni kostur, raspored i statistika. Napisan u ASP.NET Core (C#), sa MySQL bazom i prijavom preko JWT tokena. Klijent (Vue 3) je u posebnom repozitorijumu `turnirsystem-klijent`.
+Server aplikacije za organizaciju turnira: ekipe, grupna faza, tabele, eliminacioni kostur, raspored i statistika. Napisan u ASP.NET Core (C#), sa MySQL bazom i prijavom preko JWT tokena. Klijent (Vue 3) je u posebnom repozitorijumu: [turnirsystem-klijent](https://github.com/perazdera03/turnirsystem-klijent).
 
 ## Šta je potrebno
 

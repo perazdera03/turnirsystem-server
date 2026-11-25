@@ -99,8 +99,7 @@ public class EliminacijaController : ControllerBase
             k.RezultatEkipa1,
             k.RezultatEkipa2,
             k.DatumVreme,
-            Odlozen = k.Odlozen && k.PobednikId == null, //odlozeno se jedino prikazuje dok mec nije odigran
-            k.MecId
+            Odlozen = k.Odlozen && k.PobednikId == null //odlozeno se jedino prikazuje dok mec nije odigran
         });
 
         return Ok(rezultat);

@@ -74,9 +74,6 @@ namespace TurnirSystem.Migrations
                     b.Property<bool>("JeBye")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<int?>("MecId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("Odlozen")
                         .HasColumnType("tinyint(1)");
 
@@ -100,8 +97,6 @@ namespace TurnirSystem.Migrations
                     b.HasIndex("Ekipa1Id");
 
                     b.HasIndex("Ekipa2Id");
-
-                    b.HasIndex("MecId");
 
                     b.HasIndex("PobednikId");
 
@@ -166,9 +161,6 @@ namespace TurnirSystem.Migrations
                         .HasColumnType("int");
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("KorisnikId"));
-
-                    b.Property<DateTime>("DatumRegistracije")
-                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
@@ -320,10 +312,6 @@ namespace TurnirSystem.Migrations
                         .HasForeignKey("Ekipa2Id")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("TurnirSystem.Models.Mec", "Mec")
-                        .WithMany()
-                        .HasForeignKey("MecId");
-
                     b.HasOne("TurnirSystem.Models.Ekipa", "Pobednik")
                         .WithMany()
                         .HasForeignKey("PobednikId")
@@ -338,8 +326,6 @@ namespace TurnirSystem.Migrations
                     b.Navigation("Ekipa1");
 
                     b.Navigation("Ekipa2");
-
-                    b.Navigation("Mec");
 
                     b.Navigation("Pobednik");
 

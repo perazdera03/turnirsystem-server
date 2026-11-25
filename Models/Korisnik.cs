@@ -13,5 +13,4 @@ public class Korisnik
     public string Username {get; set;} = ""; //korisnicko ime za prijavu. mora biti jedinstveno (proverava se u AuthController). obavezno polje
     public string PasswordHash {get; set;} = ""; //hes lozinke. cuva se samo hash, nikad prava lozinka. obavezno polje
     public Rola Rola {get; set;} //uloga korisnika (trenutno samo Admin)
-    public DateTime DatumRegistracije {get; set;} = DateTime.UtcNow; //datum pravljenja naloga. upisuje se sam u UTC vremenu
 }
